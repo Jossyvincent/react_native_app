@@ -14,7 +14,16 @@ const Home = () => {
     return (
       <SafeAreaView style={{flex: 1, backgroundColor: COLORS.lightWhite }}>
         <Stack.Screen
-        options={{headerStyle: {backgroundColor: COLORS.lightWhite }}}
+        options={{headerStyle: {backgroundColor: COLORS.lightWhite },
+      headerShadowVisible: false,
+      headerLeft: () => (
+        <ScreenHeaderBtn iconurl = {icons.menu} dimensions="60%"/>
+      ),
+      headerLeft: () => (
+        <ScreenHeaderBtn iconurl = {icons.profile} dimensions="100%"/>
+      )
+
+      }}
         />
       </SafeAreaView>
     )
